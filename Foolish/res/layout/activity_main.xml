@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_base_bg" >
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_main_footer" />
+
+    <LinearLayout
+        android:id="@+id/ll_main_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/main_tab_bg_n"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/main_tab_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/main_tab_bg_n"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:paddingTop="2.0dip" >
+
+            <RadioButton
+                android:id="@+id/rb_main_tab_home"
+                style="@style/MainTabButton"
+                android:checked="true"
+                android:drawableTop="@drawable/tab_home_btn" />
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tab_gap"
+                android:contentDescription="@string/iv_cont_des_string" />
+
+            <RadioButton
+                android:id="@+id/rb_main_tab_talk"
+                style="@style/MainTabButton"
+                android:drawableTop="@drawable/tab_talk_btn" />
+
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tab_gap"
+                android:contentDescription="@string/iv_cont_des_string" />
+            
+            <RadioButton
+                android:id="@+id/rb_main_tab_faq"
+                style="@style/MainTabButton"
+                android:drawableTop="@drawable/tab_faq_btn" />
+
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tab_gap"
+                android:contentDescription="@string/iv_cont_des_string" />
+            
+            <RadioButton
+                android:id="@+id/rb_main_tab_mine"
+                style="@style/MainTabButton"
+                android:drawableTop="@drawable/tab_mine_btn" />
+        </RadioGroup>
+    </LinearLayout>
+
+</RelativeLayout>

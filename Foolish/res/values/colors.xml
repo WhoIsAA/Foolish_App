@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_base_bg">#eeeeee</color>
+    
+    <color name="red">#ff0000</color>
+    <color name="green">#00ff00</color>
+    <color name="blue">#0000ff</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="pull_to_refresh_tips">#ca0e00</color>
+    <color name="pull_to_refresh_lastupdate">#707038</color>
+    
+    <color name="listitem_black">#ff000000</color>
+    <color name="listitem_gray">#ff9da19e</color>
+    <color name="listitem_blue">#0e5986</color>
+    
+    
+    <color name="pub_cancel_nor">#D26900</color>
+    <color name="pub_cancel_pre">#FF8000</color>
+    <color name="pub_submit_nor">#7B7B7B</color>
+    <color name="pub_submit_pre">#FF8000</color>
+    <color name="question_title_nor">#8d8d8d</color>
+    <color name="question_title_sel">#66B3FF</color>
+    
+    <color name="head_text">#0e5986</color>
+    <color name="mine_option_bg_nor">#ffffff</color>
+    <color name="mine_option_bg_pre">#f0f0f0</color>
+    
+</resources>

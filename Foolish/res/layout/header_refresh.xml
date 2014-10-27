@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/pull_to_refresh_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <ImageView
+            android:id="@+id/pull_to_refresh_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/pull_to_refresh_layout"
+            android:layout_toStartOf="@+id/pull_to_refresh_layout"
+            android:contentDescription="@string/iv_cont_des_string"
+            android:src="@drawable/pull_to_refresh_arrow" />
+
+        <ProgressBar
+            android:id="@+id/pull_to_refresh_progressBar"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/pull_to_refresh_layout"
+            android:layout_toStartOf="@+id/pull_to_refresh_layout"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/pull_to_refresh_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/space_10"
+            android:layout_marginStart="@dimen/space_10"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/pull_to_refresh_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pull_to_refresh_pull"
+                android:textColor="@color/pull_to_refresh_tips"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pull_to_refresh_lastupdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最后刷新：2014-10-21 15:17"
+                android:textColor="@color/pull_to_refresh_lastupdate"
+                android:textSize="@dimen/text_size_10"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

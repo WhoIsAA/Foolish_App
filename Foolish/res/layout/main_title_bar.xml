@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/head_bg" >
+
+    <TextView
+        android:id="@+id/title_bar_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/space_10"
+        android:layout_marginStart="@dimen/space_10"
+        android:background="@drawable/trans_round_border_btn_selector"
+        android:clickable="true"
+        android:text="@string/register_next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_12"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/title_bar_left_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/space_10"
+        android:layout_marginStart="@dimen/space_10"
+        android:background="@drawable/trans_round_border_btn_selector"
+        android:contentDescription="@string/iv_cont_des_string"
+        android:src="@drawable/title_bar_back" />
+
+    <TextView
+        android:id="@+id/title_bar_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/register_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_20" />
+
+    <TextView
+        android:id="@+id/title_bar_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/space_10"
+        android:layout_marginRight="@dimen/space_10"
+        android:background="@drawable/trans_round_border_btn_selector"
+        android:clickable="true"
+        android:text="@string/register_next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_12" />
+
+    <ImageButton
+        android:id="@+id/title_bar_right_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/space_10"
+        android:layout_marginRight="@dimen/space_10"
+        android:background="@drawable/trans_round_border_btn_selector"
+        android:contentDescription="@string/iv_cont_des_string"
+        android:src="@drawable/header_home_btn"
+        android:visibility="gone" />
+
+</RelativeLayout>
