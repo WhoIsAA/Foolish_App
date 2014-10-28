@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_base_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <EditText
+            android:id="@+id/question_pub_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="start"
+            android:hint="@string/talk_pub_hint"
+            android:inputType="text"
+            android:padding="3dp"
+            android:textColor="#666666"
+            android:textColorHint="#777777"
+            android:textSize="@dimen/text_size_15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="#336666"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/talk_face_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginStart="@dimen/space_10"
+                android:background="@null"
+                android:contentDescription="@string/iv_cont_des_string"
+                android:src="@drawable/pub_face_selector" />
+            
+            <ImageButton
+                android:id="@+id/talk_camera_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginStart="@dimen/space_10"
+                android:background="@null"
+                android:contentDescription="@string/iv_cont_des_string"
+                android:src="@drawable/pub_camera_selector" />
+            
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginStart="@dimen/space_10"
+                android:background="@null"
+                android:contentDescription="@string/iv_cont_des_string"
+                android:src="@null" />
+            
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginStart="@dimen/space_10"
+                android:background="@null"
+                android:contentDescription="@string/iv_cont_des_string"
+                android:src="@null" />
+            
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginStart="@dimen/space_10"
+                android:background="@null"
+                android:contentDescription="@string/iv_cont_des_string"
+                android:src="@null" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

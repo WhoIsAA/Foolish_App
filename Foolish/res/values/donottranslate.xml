@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Foolish</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    
+    <!-- 刚进入的页面 -->
+    <string name="start_login">登录</string>
+    <string name="start_register">注册</string>
+    
+    
+    <!-- publish header -->
+    <string name="cancel">取消</string>
+    <string name="submit">发送</string>
+    <string name="share">分享</string>
+    <string name="publish_question">发提问</string>
+    <string name="publish_talk">发牢骚</string>
+    
+    
+    <!-- 发提问界面 -->
+    <string name="question_pub_left">问题</string>
+    <string name="question_pub_center">描述</string>
+    <string name="question_pub_right">分类</string>
+    <string name="question_pub_title_hint">写下你的问题</string>
+    <string name="question_pub_desc_hint">添加问题的补充说明</string>
+    <string name="question_pub_type_hint">加入问题关键字</string>
+    
+    <!-- 发点滴界面 -->
+    <string name="talk_pub_hint">分享生活中的点点滴滴…</string>
+    
+    
+    <string name="mine_option_my_talk">我的发言</string>
+    <string name="mine_option_my_question">我的提问</string>
+    <string name="mine_option_my_answer">我的回答</string>
+    <string name="mine_option_my_comment">我的评论</string>
+    
+    
+    <string name="listitem_empty">暂无数据可加载…</string>
+    
+    
+    <!-- 用户登录注册界面 -->
+    <string name="register_title">用户注册</string>
+    <string name="register_next">下一步</string>
+    <string name="register_finish">完成</string>
+    <string name="register_head">选择头像</string>
+    <string name="register_username_hint">输入您的昵称</string>
+    <string name="register_gesture_pwd_dif">两次绘制的手势密码不一致！</string>
+    <string name="login_retrieve_pwd">找回密码</string>
+    <string name="login_username_hint">输入您的用户名</string>
+    <string name="login_password_hint">输入您的密码</string>
+    
+    
+    
+    <!-- 设置界面 -->
+    <string name="setting_title">设置</string>
+    <string name="setting_info_title">我的信息</string>
+    <string name="setting_info_desc">查看和修改个人信息</string>
+    <string name="setting_vib_alert">震动提醒</string>
+    <string name="setting_sound_alert">声音提醒</string>
+    <string name="setting_auto_load_more">自动加载更多</string>
+    <string name="setting_close_gesture_pwd">关闭手势密码</string>
+    <string name="setting_change_gesture_pwd">修改手势密码</string>
+    <string name="setting_share_app">应用分享</string>
+    <string name="setting_check_update">检查新版本</string>
+    <string name="setting_about">关于应用</string>
+    <string name="setting_clean_account_info">清除账户信息</string>
+    
+    
+    <string name="pull_to_refresh_pull">下拉可以刷新</string>
+    <string name="pull_to_refresh_release">松开后刷新</string>
+    <string name="pull_to_refresh_refreshing">正在刷新…</string>
+	<string name="drop_down_to_loadmore_tips">加载更多</string>
+    <string name="drop_down_to_loadmore_release">松开后加载更多</string>
+    <string name="drop_down_to_loadmore_loading">正在加载…</string>
+    
+    <!-- 去除ImageView警告 -->
+    <string name="iv_cont_des_string">something</string>
+    
+</resources>

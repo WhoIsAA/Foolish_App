@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#336666"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.foolish.app.ui.widget.GesturePwdView
+            android:id="@+id/register_gesture_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/space_10" />
+
+        <Button
+            android:id="@+id/register_gesture_pwd_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/space_20"
+            android:background="@drawable/login_btn_selector"
+            android:text="重绘"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15" />
+    </RelativeLayout>
+</LinearLayout>
