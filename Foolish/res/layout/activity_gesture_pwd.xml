@@ -11,11 +11,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-        <com.foolish.app.ui.widget.GesturePwdView
+        <TextView 
+            android:id="@+id/register_gesture_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_16"
+            android:text="@string/gesture_password_tips_def"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/space_20" />
+        
+        <com.foolish.app.ui.widget.LockPatternView
             android:id="@+id/register_gesture_pwd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
+            android:layout_below="@+id/register_gesture_tips"
             android:layout_margin="@dimen/space_10" />
 
         <Button

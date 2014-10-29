@@ -75,6 +75,29 @@
     <string name="drop_down_to_loadmore_release">松开后加载更多</string>
     <string name="drop_down_to_loadmore_loading">正在加载…</string>
     
+    
+    
+    <!-- 手势密码 -->
+    <string name="gesture_password_tips_def">开始绘制手势密码</string>
+    <string name="gesture_password_tips_progress">完成后松开手指</string>
+    <string name="gesture_password_tips_entered">图案已记录</string>
+    <string name="gesture_password_tips_need_to_confirm">请再次绘制手势密码</string>
+    <string name="gesture_password_tips_confirmed">确认保存新手势密码</string>
+    <string name="gesture_password_tips_wrong">与上次输入不一致，请重试</string>
+    <string name="gesture_password_tips_too_short">至少连接四个点，请重试</string>
+    
+    <string name="lockscreen_access_pattern_start">"开始绘制图案"</string>
+    <string name="lockscreen_access_pattern_cleared">"图案已清除"</string>
+    <string name="lockscreen_access_pattern_cell_added">"已添加单元格"</string>
+    <string name="lockscreen_access_pattern_detected">"图案绘制完成"</string>
+    <string name="lockpattern_retry_button_text">"重试"</string>
+    <string name="lockpattern_continue_button_text">"继续"</string>
+    <string name="lockpattern_confirm_button_text">"确认"</string>
+    <string name="lockpattern_recording_intro_header">"绘制解锁图案"</string>
+    <string name="lockpattern_settings_help_how_to_record">"如何绘制解锁图案"</string>
+    <string name="gesture_password_guide_text">你可以创建一个解锁图案，这样他人在借用你的手机时，将无法打开应用。</string>
+    <string name="gesture_password_guide_creat_btn">创建手势密码</string>
+    
     <!-- 去除ImageView警告 -->
     <string name="iv_cont_des_string">something</string>
     

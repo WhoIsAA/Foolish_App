@@ -9,6 +9,9 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -69,7 +72,6 @@ public class AppStart extends BaseActivity implements OnClickListener{
 		
 		initViewPager();
 		initDots();
-		
 	}
 	
 	

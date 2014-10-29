@@ -68,7 +68,10 @@ public class RegisterActivity extends BaseActivity implements OnClickListener {
 			break;
 
 		case R.id.title_bar_right:
-
+			intent = new Intent(RegisterActivity.this, GesturePwdActivity.class);
+			startActivity(intent);
+			finish();
+			
 			break;
 
 		}

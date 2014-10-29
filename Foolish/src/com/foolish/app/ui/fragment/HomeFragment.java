@@ -1,10 +1,10 @@
 package com.foolish.app.ui.fragment;
 
 import com.foolish.app.R;
-import com.foolish.app.common.StringUtils;
 import com.foolish.app.ui.AppStart;
 import com.foolish.app.ui.widget.PullToRefreshScrollView;
 import com.foolish.app.ui.widget.PullToRefreshScrollView.IXScrollViewListener;
+import com.foolish.app.utils.StringUtils;
 
 import android.content.Intent;
 import android.os.AsyncTask;

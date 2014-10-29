@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.foolish.app.R;
 import com.foolish.app.common.Consts;
-import com.foolish.app.common.StringUtils;
+import com.foolish.app.utils.StringUtils;
 
 import android.content.Context;
 import android.view.LayoutInflater;

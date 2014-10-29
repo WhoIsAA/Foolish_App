@@ -61,6 +61,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 		//右边
 		mTitleNext = (TextView) findViewById(R.id.title_bar_right);
 		mTitleNext.setVisibility(View.VISIBLE);
+		mTitleNext.setText(getResources().getString(R.string.login_retrieve_pwd));
 		mTitleNext.setOnClickListener(this);
 		mTitleNextImg = (ImageButton)findViewById(R.id.title_bar_right_img);
 		mTitleNextImg.setVisibility(View.GONE);

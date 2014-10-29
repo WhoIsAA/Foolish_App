@@ -7,10 +7,12 @@ import java.util.List;
 import com.foolish.app.R;
 import com.foolish.app.adapter.ListViewTalkAdapter;
 import com.foolish.app.common.Consts;
-import com.foolish.app.common.StringUtils;
+import com.foolish.app.ui.activity.TalkPubActivity;
 import com.foolish.app.ui.widget.PullToRefreshListView;
 import com.foolish.app.ui.widget.PullToRefreshListView.FoolListViewListener;
+import com.foolish.app.utils.StringUtils;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -144,9 +146,13 @@ public class TalkFragment extends Fragment implements OnClickListener, OnItemCli
 
 	@Override
 	public void onClick(View v) {
+		Intent intent = null;
+		
 		switch (v.getId()) {
 		case R.id.title_bar_right_img:
-			Toast.makeText(getActivity(), "发言", Toast.LENGTH_SHORT).show();
+			intent = new Intent(getActivity(), TalkPubActivity.class);
+			startActivity(intent);
+			
 			break;
 
 		

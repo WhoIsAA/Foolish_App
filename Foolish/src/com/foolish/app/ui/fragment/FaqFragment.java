@@ -7,10 +7,10 @@ import java.util.List;
 import com.foolish.app.R;
 import com.foolish.app.adapter.ListViewFaqAdapter;
 import com.foolish.app.common.Consts;
-import com.foolish.app.common.StringUtils;
-import com.foolish.app.ui.activity.QuestionPub;
+import com.foolish.app.ui.activity.QuestionPubActivity;
 import com.foolish.app.ui.widget.PullToRefreshListView;
 import com.foolish.app.ui.widget.PullToRefreshListView.FoolListViewListener;
+import com.foolish.app.utils.StringUtils;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -155,7 +155,7 @@ public class FaqFragment extends Fragment implements OnClickListener,
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.title_bar_right_img:
-			Intent intent = new Intent(getActivity(), QuestionPub.class);
+			Intent intent = new Intent(getActivity(), QuestionPubActivity.class);
 			startActivity(intent);
 			getActivity().overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
 			break;
