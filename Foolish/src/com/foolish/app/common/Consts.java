@@ -16,6 +16,14 @@ public class Consts {
 	public static final String LISTVIEW_TALK_CONTENT = "lv_talk_content";
 	public static final String LISTVIEW_TALK_DATE = "lv_talk_date";
 	
+	public static final String LISTVIEW_COMMENT_USERNAME = "lv_comment_username";
+	public static final String LISTVIEW_COMMENT_CONTENT = "lv_comment_content";
+	public static final String LISTVIEW_COMMENT_DATE = "lv_comment_date";
+	
+	
+	
+	
+	
 	
 	
 }

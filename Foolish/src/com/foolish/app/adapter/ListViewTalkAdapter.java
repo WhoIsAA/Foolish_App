@@ -47,7 +47,7 @@ public class ListViewTalkAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder viewHolder = null;
 		if(convertView == null) {
-			convertView = mInflater.inflate(R.layout.listitem_talk, null);
+			convertView = mInflater.inflate(R.layout.listitem_share, null);
 			viewHolder = new ViewHolder();
 			viewHolder.headImage = (ImageView)convertView.findViewById(R.id.talk_listitem_head);
 			viewHolder.talkUsername = (TextView)convertView.findViewById(R.id.talk_listitem_username);

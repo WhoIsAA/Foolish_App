@@ -2,13 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_base_bg"
     android:orientation="vertical" >
     
 	<include layout="@layout/main_title_bar"/>
 	
-	<com.foolish.app.ui.widget.PullToRefreshScrollView 
-	    android:id="@+id/pull_to_refresh_scrollview"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent" />
     
 </LinearLayout>

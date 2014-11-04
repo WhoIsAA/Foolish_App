@@ -79,4 +79,10 @@
         <attr name="arrowGreenUp" format="reference" />
         <attr name="arrowRedUp" format="reference" />
     </declare-styleable>
+    
+    <attr name="rightPadding" format="dimension" />
+
+    <declare-styleable name="SlidingMenu">
+        <attr name="rightPadding" />
+    </declare-styleable>
 </resources>

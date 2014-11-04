@@ -2,10 +2,8 @@ package com.foolish.app.ui.widget;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import com.foolish.app.R;
 import com.foolish.app.utils.LockPatternUtils;
-
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;

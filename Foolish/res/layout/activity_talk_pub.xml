@@ -11,13 +11,62 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
+        <LinearLayout
+            android:id="@+id/share_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/space_3"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/share_title_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/space_3"
+                android:background="@drawable/pub_title_selector"
+                android:padding="@dimen/space_3"
+                android:button="@null"
+                android:drawablePadding="0dp"
+                android:textSize="0sp" />
+
+            <EditText
+                android:id="@+id/share_title_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/space_3"
+                android:layout_marginStart="@dimen/space_3"
+                android:background="@null"
+                android:enabled="false"
+                android:focusable="false"
+                android:gravity="start|center_vertical"
+                android:hint="@string/share_pub_title_lock"
+                android:inputType="text"
+                android:padding="3dp"
+                android:singleLine="true"
+                android:textColor="#666666"
+                android:textColorHint="#777777"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+
+        <View 
+            android:id="@+id/share_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#cfcfcf"
+            android:layout_below="@+id/share_title_layout" />
+        
         <EditText
-            android:id="@+id/question_pub_edit"
+            android:id="@+id/share_content_edit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@null"
+            android:layout_above="@+id/share_pub_bottom"
+            android:layout_below="@+id/share_line"
+            android:layout_margin="@dimen/space_3"
             android:gravity="start"
-            android:hint="@string/talk_pub_hint"
+            android:background="@null"
+            android:hint="@string/share_pub_content_hint"
             android:inputType="text"
             android:padding="3dp"
             android:textColor="#666666"
@@ -25,6 +74,7 @@
             android:textSize="@dimen/text_size_15" />
 
         <LinearLayout
+            android:id="@+id/share_pub_bottom"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_alignParentBottom="true"
@@ -32,61 +82,71 @@
             android:orientation="horizontal" >
 
             <ImageButton
-                android:id="@+id/talk_face_btn"
+                android:id="@+id/share_face_btn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="@dimen/space_10"
                 android:layout_marginStart="@dimen/space_10"
+                android:layout_weight="2"
                 android:background="@null"
                 android:contentDescription="@string/iv_cont_des_string"
                 android:src="@drawable/pub_face_selector" />
-            
+
             <ImageButton
-                android:id="@+id/talk_camera_btn"
+                android:id="@+id/share_picture_btn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="@dimen/space_10"
                 android:layout_marginStart="@dimen/space_10"
+                android:layout_weight="2"
+                android:background="@null"
+                android:contentDescription="@string/iv_cont_des_string"
+                android:src="@drawable/pub_picture_selector" />
+
+            <ImageButton
+                android:id="@+id/share_camera_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginStart="@dimen/space_10"
+                android:layout_weight="2"
                 android:background="@null"
                 android:contentDescription="@string/iv_cont_des_string"
                 android:src="@drawable/pub_camera_selector" />
-            
-            <ImageButton
+
+            <TextView
+                android:id="@+id/share_public_btn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/space_10"
-                android:layout_marginStart="@dimen/space_10"
-                android:background="@null"
-                android:contentDescription="@string/iv_cont_des_string"
-                android:src="@null" />
-            
-            <ImageButton
+                android:layout_margin="@dimen/space_3"
+                android:layout_weight="2"
+                android:background="@drawable/trans_round_border_btn_selector"
+                android:clickable="true"
+                android:text="公开"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/share_comment_btn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/space_10"
-                android:layout_marginStart="@dimen/space_10"
-                android:background="@null"
-                android:contentDescription="@string/iv_cont_des_string"
-                android:src="@null" />
-            
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/space_10"
-                android:layout_marginStart="@dimen/space_10"
-                android:background="@null"
-                android:contentDescription="@string/iv_cont_des_string"
-                android:src="@null" />
+                android:layout_marginLeft="@dimen/space_3"
+                android:layout_marginStart="@dimen/space_3"
+                android:layout_marginRight="@dimen/space_5"
+                android:layout_marginEnd="@dimen/space_5"
+                android:layout_weight="3"
+                android:background="@drawable/trans_round_border_btn_selector"
+                android:clickable="true"
+                android:text="允许评论"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12" />
         </LinearLayout>
     </RelativeLayout>
 

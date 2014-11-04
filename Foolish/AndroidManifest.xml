@@ -53,9 +53,13 @@
             android:windowSoftInputMode="stateVisible|adjustResize"/>
         
         <activity 
-            android:name=".ui.activity.TalkPubActivity" 
+            android:name=".ui.activity.SharePubActivity" 
             android:theme="@android:style/Theme.Black.NoTitleBar"
             android:windowSoftInputMode="stateVisible|adjustResize"/>
+        
+        <activity 
+            android:name=".ui.activity.ShareDetailActivity" 
+            android:theme="@android:style/Theme.Black.NoTitleBar"/>
         
         <activity 
             android:name=".ui.activity.SettingActivity" 

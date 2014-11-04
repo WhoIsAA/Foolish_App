@@ -210,6 +210,7 @@ public class GesturePwdActivity extends BaseActivity implements OnClickListener{
 			postClearPatternRunnable(1000);
 			break;
 		case Status.CONFIRMED:
+			mGesturePwdView.setEnabled(false);
 			mTitleNext.setVisibility(View.VISIBLE);
 			mTipsTextView.setText(getResources().getString(R.string.gesture_password_tips_confirmed));
 			ToastUtils.show(GesturePwdActivity.this, mChosenPattern.toString());
@@ -238,6 +239,7 @@ public class GesturePwdActivity extends BaseActivity implements OnClickListener{
 	 */
 	private void resetGesturePwd() {
 		initTitle();
+		mGesturePwdView.setEnabled(true);
 		mTipsTextView.setText(getResources().getString(R.string.gesture_password_tips_def));
 		mGesturePwdView.clearPattern();
 		mCurStatus = Status.INTRODUCTION;

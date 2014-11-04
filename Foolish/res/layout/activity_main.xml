@@ -1,73 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<com.foolish.app.ui.widget.SlidingMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:aa="http://schemas.android.com/apk/res/com.foolish.app"
+    android:id="@+id/main_menu"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:background="@color/app_base_bg" >
-    
-    <android.support.v4.view.ViewPager
-        android:id="@+id/vp_main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/ll_main_footer" />
+    aa:rightPadding="100dp"
+    android:background="@drawable/bg"
+    android:scrollbars="none" >
 
     <LinearLayout
-        android:id="@+id/ll_main_footer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/main_tab_bg_n"
-        android:gravity="center_vertical"
+        android:id="@+id/main_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="horizontal" >
 
-        <RadioGroup
-            android:id="@+id/main_tab_group"
+        <include layout="@layout/main_menu" />
+
+        <RelativeLayout
+            android:id="@+id/main_content_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="@drawable/main_tab_bg_n"
-            android:gravity="bottom"
-            android:orientation="horizontal"
-            android:paddingTop="2.0dip" >
+            android:layout_height="match_parent" >
 
-            <RadioButton
-                android:id="@+id/rb_main_tab_home"
-                style="@style/MainTabButton"
-                android:checked="true"
-                android:drawableTop="@drawable/tab_home_btn" />
-            
-            <ImageView 
-                android:layout_width="wrap_content"
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/ll_main_footer" />
+
+            <LinearLayout
+                android:id="@+id/ll_main_footer"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/tab_gap"
-                android:contentDescription="@string/iv_cont_des_string" />
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/main_tab_bg_n"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
 
-            <RadioButton
-                android:id="@+id/rb_main_tab_talk"
-                style="@style/MainTabButton"
-                android:drawableTop="@drawable/tab_talk_btn" />
+                <RadioGroup
+                    android:id="@+id/main_tab_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/main_tab_bg_n"
+                    android:gravity="bottom"
+                    android:orientation="horizontal"
+                    android:paddingTop="2.0dip" >
 
-            <ImageView 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/tab_gap"
-                android:contentDescription="@string/iv_cont_des_string" />
-            
-            <RadioButton
-                android:id="@+id/rb_main_tab_faq"
-                style="@style/MainTabButton"
-                android:drawableTop="@drawable/tab_faq_btn" />
+                    <RadioButton
+                        android:id="@+id/rb_main_tab_home"
+                        style="@style/MainTabButton"
+                        android:checked="true"
+                        android:drawableTop="@drawable/tab_home_btn" />
 
-            <ImageView 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/tab_gap"
-                android:contentDescription="@string/iv_cont_des_string" />
-            
-            <RadioButton
-                android:id="@+id/rb_main_tab_mine"
-                style="@style/MainTabButton"
-                android:drawableTop="@drawable/tab_mine_btn" />
-        </RadioGroup>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tab_gap"
+                        android:contentDescription="@string/iv_cont_des_string" />
+
+                    <RadioButton
+                        android:id="@+id/rb_main_tab_talk"
+                        style="@style/MainTabButton"
+                        android:drawableTop="@drawable/tab_talk_btn" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tab_gap"
+                        android:contentDescription="@string/iv_cont_des_string" />
+
+                    <RadioButton
+                        android:id="@+id/rb_main_tab_faq"
+                        style="@style/MainTabButton"
+                        android:drawableTop="@drawable/tab_faq_btn" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tab_gap"
+                        android:contentDescription="@string/iv_cont_des_string" />
+
+                    <RadioButton
+                        android:id="@+id/rb_main_tab_mine"
+                        style="@style/MainTabButton"
+                        android:drawableTop="@drawable/tab_mine_btn" />
+                </RadioGroup>
+            </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
 
-</RelativeLayout>
+</com.foolish.app.ui.widget.SlidingMenu>

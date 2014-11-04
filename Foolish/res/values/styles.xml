@@ -71,7 +71,7 @@
         <item name="android:scrollingCache">false</item>
         <item name="android:fadingEdge">none</item>
         <item name="android:cacheColorHint">#00000000</item>
-        <item name="android:listSelector">@null</item>
+        <item name="android:listSelector">@drawable/listview_item_bg_selector</item>
         
     </style>
     

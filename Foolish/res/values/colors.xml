@@ -15,6 +15,13 @@
     <color name="listitem_blue">#0e5986</color>
     
     
+    
+    <color name="transparent">#00000000</color>
+    <color name="micro_transparent">#33000000</color>
+    <color name="translucent">#77000000</color>
+    <color name="deep_translucent">#99000000</color>
+    
+    
     <color name="pub_cancel_nor">#D26900</color>
     <color name="pub_cancel_pre">#FF8000</color>
     <color name="pub_submit_nor">#7B7B7B</color>
@@ -25,5 +32,11 @@
     <color name="head_text">#0e5986</color>
     <color name="mine_option_bg_nor">#ffffff</color>
     <color name="mine_option_bg_pre">#f0f0f0</color>
+    
+    
+    
+    <drawable name="list_normal">#96FFFFFF</drawable> 
+    <drawable name="list_active">#668ad1f8</drawable> 
+    <drawable name="list_pressed">#CA8ad1f8</drawable> 
     
 </resources>

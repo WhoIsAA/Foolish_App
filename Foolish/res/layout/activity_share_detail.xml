@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_base_bg"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/main_title_bar"/>
+    <include layout="@layout/listitem_share"/>
+
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#08899c" />
+    
+    <ListView 
+        android:id="@+id/lv_share_detail_comments"
+        style="@style/listitem_style" />
+     
+</LinearLayout>

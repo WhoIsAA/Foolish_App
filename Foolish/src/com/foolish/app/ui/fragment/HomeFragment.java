@@ -20,7 +20,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class HomeFragment extends Fragment implements OnClickListener, IXScrollViewListener{
+public class HomeFragment extends Fragment implements OnClickListener{
 
 	private static final String TAG = "八卦八卦";
 	private ImageButton mTitleBackImg;
@@ -30,11 +30,8 @@ public class HomeFragment extends Fragment implements OnClickListener, IXScrollV
 	private TextView mTitleNext;
 	
 	private View mHomeView;
-	private WebView mWebView;
-	private PullToRefreshScrollView mScrollView;
 	
 	
-	private String mCurUrl = "http://sina.cn/?vt=4";
 	
 	
 	@Override
@@ -56,40 +53,8 @@ public class HomeFragment extends Fragment implements OnClickListener, IXScrollV
 	
 	private void initView() {
 		initTitle();
-		initWebView();
-		
-		
 		
 	}
-	
-	
-	private void initWebView() {
-		mScrollView = (PullToRefreshScrollView)mHomeView.findViewById(R.id.pull_to_refresh_scrollview);
-		mScrollView.setPullRefreshEnable(true);
-		mScrollView.setPullLoadEnable(false);
-		mScrollView.setAutoLoadEnable(false);
-		mScrollView.setIXScrollViewListener(this);
-		mScrollView.setRefreshTime(StringUtils.getCurTime());
-		
-		View content = LayoutInflater.from(getActivity()).inflate(R.layout.scrollview_content, null);
-		if(content != null) {
-			mWebView = (WebView)content.findViewById(R.id.wv_home);
-			mWebView.loadUrl(mCurUrl);
-			mWebView.setWebViewClient(new WebViewClient() {
-				@Override
-				public boolean shouldOverrideUrlLoading(WebView view, String url) {
-					mCurUrl = url;
-					view.loadUrl(url);
-					return true;
-				}
-			});
-			
-		}
-		mScrollView.setView(content);
-		
-		
-	}
-	
 	
 	private void initTitle() {
 		//左边
@@ -123,47 +88,5 @@ public class HomeFragment extends Fragment implements OnClickListener, IXScrollV
 		
 	}
 
-	
-	 private void onLoad() {
-	        mScrollView.stopRefresh();
-	        mScrollView.stopLoadMore();
-	        mScrollView.setRefreshTime(StringUtils.getCurTime());
-	    }
-	
-
-	@Override
-	public void onRefresh() {
-		new RefreshTask().execute(0);
-	}
-
-
-	@Override
-	public void onLoadMore() {
-		
-	}
-	
-	
-	private class RefreshTask extends AsyncTask<Integer, Integer, Integer> {
-
-		@Override
-		protected Integer doInBackground(Integer... params) {
-			try {
-				Thread.sleep(2000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			return null;
-		}
-		
-		
-		@Override
-		protected void onPostExecute(Integer result) {
-			mWebView.loadUrl(mCurUrl);
-			onLoad();
-			
-			super.onPostExecute(result);
-		}
-	}
-	
 	
 }
