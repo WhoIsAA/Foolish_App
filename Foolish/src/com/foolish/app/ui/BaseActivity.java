@@ -1,11 +1,11 @@
 package com.foolish.app.ui;
 
-import com.foolish.app.R;
 import com.foolish.app.utils.AppManager;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.inputmethod.InputMethodManager;
+
 
 public class BaseActivity extends Activity {
 
@@ -26,17 +26,8 @@ public class BaseActivity extends Activity {
 		super.onDestroy();
 	}
 	
+
 	
-	@Override
-	public boolean dispatchKeyEvent(KeyEvent event) {
-		if(event.getKeyCode() == KeyEvent.KEYCODE_BACK) {
-			if(event.getAction() == KeyEvent.ACTION_UP) {
-				finish();
-				overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
-				
-				return true;
-			}
-		}
-		return super.dispatchKeyEvent(event);
-	}
+	
+	
 }

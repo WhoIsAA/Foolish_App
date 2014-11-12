@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_alignParentBottom="true"
+    android:background="#ffffff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="@dimen/space_10" >
+
+    <ImageButton
+        android:id="@+id/id_ib_chat_send_face"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/space_10"
+        android:layout_marginRight="@dimen/space_10"
+        android:background="@drawable/chat_send_face_selector"
+        android:contentDescription="@string/iv_cont_des_string"
+        android:padding="@dimen/space_5" />
+
+    <EditText
+        android:id="@+id/id_et_chat_send"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/id_ib_chat_send_face"
+        android:layout_toLeftOf="@+id/id_btn_chat_send"
+        android:layout_toRightOf="@+id/id_ib_chat_send_face"
+        android:layout_toStartOf="@+id/id_btn_chat_send"
+        android:background="@drawable/edit_selector"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/space_3" />
+
+    <Button
+        android:id="@+id/id_btn_chat_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/space_10"
+        android:layout_marginStart="@dimen/space_10"
+        android:background="@drawable/send_btn_selector"
+        android:paddingLeft="@dimen/space_10"
+        android:paddingRight="@dimen/space_10"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_15" />
+
+</RelativeLayout>

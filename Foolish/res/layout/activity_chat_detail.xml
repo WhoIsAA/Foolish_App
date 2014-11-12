@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_base_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/main_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/id_lv_chat_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/chat_detail_bottom_line"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:dividerHeight="@dimen/space_5"
+            android:listSelector="#00000000" />
+
+        <View
+            android:id="@+id/chat_detail_bottom_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_above="@+id/chat_detail_bottom_layout"
+            android:background="#bdbdbd" />
+
+        <include
+            android:id="@+id/chat_detail_bottom_layout"
+            layout="@layout/send_msg_layout" />
+    </RelativeLayout>
+
+</LinearLayout>

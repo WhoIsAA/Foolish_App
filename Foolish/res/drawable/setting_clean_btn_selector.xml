@@ -3,7 +3,7 @@
     <item android:state_pressed="true">
         <shape>
             
-            <solid android:color="#d92945" />
+            <solid android:color="#e63955" />
             
             <!-- 圆角 -->
             <corners 
@@ -19,7 +19,7 @@
     
     <item>
         <shape>
-            <solid android:color="#e63955"/>
+            <solid android:color="#d92945"/>
             
             <corners 
                 android:radius="5dp" />

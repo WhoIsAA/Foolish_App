@@ -14,12 +14,14 @@ import android.view.animation.ScaleAnimation;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.foolish.app.R;
 import com.foolish.app.adapter.CommentAdapter;
 import com.foolish.app.common.Consts;
 import com.foolish.app.ui.BaseActivity;
+import com.foolish.app.utils.SystemUtils;
 
 public class ShareDetailActivity extends BaseActivity implements OnClickListener{
 
@@ -33,9 +35,9 @@ public class ShareDetailActivity extends BaseActivity implements OnClickListener
 	private ListView mCommentListView;
 	private CommentAdapter mAdapter;
 	private List<HashMap<String, Object>> mCommentList;
+	private ScrollView mScrollView;
 	
-	
-	private String[] contents = { "楼主说得好啊，我顶！", "完全不知道你在说什么", "沙发" };
+	private String[] contents = { "楼主说得好啊，我顶！", "完全不知道你在说什么", "沙发", "吵什么吵，唧唧歪歪", "哦噢，城管来了" };
 	
 	
 	@Override
@@ -50,6 +52,8 @@ public class ShareDetailActivity extends BaseActivity implements OnClickListener
 	
 	private void initView() {
 		initTitle();
+		mScrollView = (ScrollView)findViewById(R.id.share_detail_scrollview);
+		mScrollView.smoothScrollTo(0, 0);
 		mCommentListView = (ListView)findViewById(R.id.lv_share_detail_comments);
 		mCommentList = getData();
 		mAdapter = new CommentAdapter(ShareDetailActivity.this, mCommentList);
@@ -107,11 +111,11 @@ public class ShareDetailActivity extends BaseActivity implements OnClickListener
 	 */
 	private List<HashMap<String, Object>> getData() {
 		List<HashMap<String, Object>> list = new ArrayList<HashMap<String,Object>>();
-		for(int i=0; i<3; i++) {
+		for(int i=0; i<contents.length; i++) {
 			HashMap<String, Object> map = new HashMap<String, Object>();
-			map.put(Consts.LISTVIEW_COMMENT_USERNAME, "用户" + i);
-			map.put(Consts.LISTVIEW_COMMENT_CONTENT, contents[i]);
-			map.put(Consts.LISTVIEW_COMMENT_DATE, (i+1)*2 + "小时前");
+			map.put(Consts.COMMENT_USERNAME, "用户" + i);
+			map.put(Consts.COMMENT_CONTENT, contents[i]);
+			map.put(Consts.COMMENT_DATE, (i+1)*2 + "小时前");
 			list.add(map);
 		
 		}

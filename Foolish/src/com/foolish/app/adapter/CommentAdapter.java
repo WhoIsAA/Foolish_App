@@ -54,11 +54,11 @@ public class CommentAdapter extends BaseAdapter {
 		} else {
 			viewHolder = (ViewHolder)convertView.getTag();
 		}
-		String username = mList.get(position).get(Consts.LISTVIEW_COMMENT_USERNAME).toString();
+		String username = mList.get(position).get(Consts.COMMENT_USERNAME).toString();
 		viewHolder.username.setText(StringUtils.checkNull(username));
-		String content = mList.get(position).get(Consts.LISTVIEW_COMMENT_CONTENT).toString();
+		String content = mList.get(position).get(Consts.COMMENT_CONTENT).toString();
 		viewHolder.commentContent.setText(StringUtils.checkNull(content));
-		String date = mList.get(position).get(Consts.LISTVIEW_COMMENT_DATE).toString();
+		String date = mList.get(position).get(Consts.COMMENT_DATE).toString();
 		viewHolder.commentDate.setText(StringUtils.checkNull(date));
 		
 		return convertView;

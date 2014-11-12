@@ -9,7 +9,7 @@
                 android:bottomLeftRadius="0dp"
                 android:bottomRightRadius="0dp" />
                 
-            <solid android:color="#336666" />
+            <solid android:color="#068ea4" />
         </shape>
     </item>
     
@@ -21,7 +21,7 @@
                 android:bottomLeftRadius="0dp"
                 android:bottomRightRadius="0dp" />
             
-            <solid android:color="#068ea4" />
+            <solid android:color="#336666" />
         </shape>
     </item>
 

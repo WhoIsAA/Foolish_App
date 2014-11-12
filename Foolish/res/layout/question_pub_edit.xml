@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:background="@null"
         android:gravity="start"
-        android:padding="3dp"
+        android:padding="@dimen/edit_padding"
         android:hint="@string/question_pub_title_hint"
         android:inputType="text"
         android:textColor="#666666"

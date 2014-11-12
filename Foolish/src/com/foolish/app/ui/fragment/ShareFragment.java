@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.foolish.app.R;
-import com.foolish.app.adapter.ListViewTalkAdapter;
+import com.foolish.app.adapter.ShareAdapter;
 import com.foolish.app.common.Consts;
 import com.foolish.app.ui.activity.ShareDetailActivity;
 import com.foolish.app.ui.activity.SharePubActivity;
@@ -38,7 +38,7 @@ public class ShareFragment extends Fragment implements OnClickListener, OnItemCl
 	
 	private View mTalkView;
 	private PullToRefreshListView mTalkListView;
-	private ListViewTalkAdapter mAdapter;
+	private ShareAdapter mAdapter;
 	private List<HashMap<String, Object>> mTalkList;
 	
 	private int total = 10;
@@ -115,7 +115,7 @@ public class ShareFragment extends Fragment implements OnClickListener, OnItemCl
 		
 		TextView emptyTextView = (TextView)mTalkView.findViewById(R.id.tv_talk_listview_empty);
 		mTalkList = getData();
-		mAdapter = new ListViewTalkAdapter(getActivity(), mTalkList);
+		mAdapter = new ShareAdapter(getActivity(), mTalkList);
 		mTalkListView.setAdapter(mAdapter);
 		mTalkListView.setEmptyView(emptyTextView);
 		mTalkListView.setOnItemClickListener(this);
@@ -128,11 +128,10 @@ public class ShareFragment extends Fragment implements OnClickListener, OnItemCl
 		List<HashMap<String, Object>> list = new ArrayList<HashMap<String,Object>>();
 		for(int i=0; i<total; i++) {
 			HashMap<String, Object> map = new HashMap<String, Object>();
-			map.put(Consts.LISTVIEW_TALK_USERNAME, "用户" + i);
-			map.put(Consts.LISTVIEW_TALK_CONTENT, contents[i%contents.length]);
-			map.put(Consts.LISTVIEW_TALK_DATE, (i+1)*2 + "小时前");
+			map.put(Consts.TALK_USERNAME, "用户" + i);
+			map.put(Consts.TALK_CONTENT, contents[i%contents.length]);
+			map.put(Consts.TALK_DATE, (i+1)*2 + "小时前");
 			list.add(map);
-		
 		}
 		return list;
 	}

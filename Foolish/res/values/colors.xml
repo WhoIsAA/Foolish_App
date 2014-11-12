@@ -34,6 +34,8 @@
     <color name="mine_option_bg_pre">#f0f0f0</color>
     
     
+    <color name="mine_head_line_nor">#773d3b3c</color>
+    <color name="mine_head_line_checkd">#15a6e3</color>
     
     <drawable name="list_normal">#96FFFFFF</drawable> 
     <drawable name="list_active">#668ad1f8</drawable> 

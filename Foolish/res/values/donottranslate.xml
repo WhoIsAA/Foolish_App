@@ -27,10 +27,14 @@
     <string name="question_pub_desc_hint">添加问题的补充说明</string>
     <string name="question_pub_type_hint">加入问题关键字</string>
     
-    <!-- 发点滴界面 -->
+    <!-- 发分享界面 -->
     <string name="share_pub_content_hint">分享生活中的点点滴滴…</string>
     <string name="share_pub_title_lock">点击左边按钮解锁标题框</string>
     <string name="share_pub_title_unlock">输入分享标题…</string>
+    
+    <!-- 搜索界面 -->
+    <string name="search_content_hint">昵称/部落/聊天记录</string>
+    
     
     
     <string name="mine_option_my_talk">我的发言</string>

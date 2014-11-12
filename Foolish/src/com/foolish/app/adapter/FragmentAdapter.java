@@ -2,7 +2,7 @@ package com.foolish.app.adapter;
 
 import com.foolish.app.ui.activity.MainActivity;
 import com.foolish.app.ui.fragment.ShareFragment;
-import com.foolish.app.ui.fragment.FaqFragment;
+import com.foolish.app.ui.fragment.ChatFragment;
 import com.foolish.app.ui.fragment.HomeFragment;
 import com.foolish.app.ui.fragment.MineFragment;
 
@@ -30,8 +30,8 @@ public class FragmentAdapter extends FragmentPagerAdapter {
 			return shareFragment;
 			
 		case MainActivity.TAB_FAQ:
-			FaqFragment faqFragment = new FaqFragment();
-			return faqFragment;
+			ChatFragment chatFragment = new ChatFragment();
+			return chatFragment;
 			
 		case MainActivity.TAB_MINE:
 			MineFragment mineFragment = new MineFragment();

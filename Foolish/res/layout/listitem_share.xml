@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_8"
             android:contentDescription="@string/iv_cont_des_string"
-            android:src="@drawable/listitem_empty" />
+            android:background="@drawable/listitem_empty" />
 
         <LinearLayout
             android:layout_width="match_parent"

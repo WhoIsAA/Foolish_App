@@ -19,7 +19,7 @@
                 android:width="1dp"
                 android:color="#06859c" />
             
-            <solid android:color="#ee068aa0" />
+            <solid android:color="#bb068ea4" />
         </shape>
     </item>
     
@@ -41,7 +41,7 @@
                 android:width="1dp"
                 android:color="#06859c" />
             
-            <solid android:color="#bb068ea4" />
+            <solid android:color="#ee068aa0" />
         </shape>
     </item>
 

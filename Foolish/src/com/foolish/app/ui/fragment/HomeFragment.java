@@ -22,7 +22,7 @@ import android.widget.Toast;
 
 public class HomeFragment extends Fragment implements OnClickListener{
 
-	private static final String TAG = "八卦八卦";
+	private static final String TAG = "首页";
 	private ImageButton mTitleBackImg;
 	private ImageButton mTitleNextImg;
 	private TextView mTitleText;

@@ -3,13 +3,13 @@ package com.foolish.app.ui.activity;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnFocusChangeListener;
 import android.widget.CheckBox;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.CompoundButton.OnCheckedChangeListener;
@@ -21,12 +21,11 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.foolish.app.R;
-import com.foolish.app.common.UIHelper;
 import com.foolish.app.ui.BaseActivity;
+import com.foolish.app.utils.SystemUtils;
 import com.foolish.app.utils.ToastUtils;
+
 
 public class SharePubActivity extends BaseActivity implements OnClickListener{
 
@@ -39,6 +38,7 @@ public class SharePubActivity extends BaseActivity implements OnClickListener{
 	
 	private CheckBox mTitleCheckBox;
 	private EditText mTitleEdit;
+	private EditText mContentEdit;
 	private ImageButton mFaceBtn;
 	private ImageButton mPictureBtn;
 	private ImageButton mCameraBtn;
@@ -61,6 +61,9 @@ public class SharePubActivity extends BaseActivity implements OnClickListener{
 		mTitleCheckBox = (CheckBox)findViewById(R.id.share_title_checkbox);
 		mTitleCheckBox.setOnCheckedChangeListener(onCheckedChangeListener);
 		mTitleEdit = (EditText)findViewById(R.id.share_title_edit);
+		mTitleEdit.setOnFocusChangeListener(onFocusChangeListener);
+		mContentEdit = (EditText)findViewById(R.id.share_content_edit);
+		mContentEdit.setOnFocusChangeListener(onFocusChangeListener);
 		mFaceBtn = (ImageButton)findViewById(R.id.share_face_btn);
 		mFaceBtn.setOnClickListener(this);
 		mPictureBtn = (ImageButton)findViewById(R.id.share_picture_btn);
@@ -95,6 +98,19 @@ public class SharePubActivity extends BaseActivity implements OnClickListener{
 		mTitleText = (TextView) findViewById(R.id.title_bar_center);
 		mTitleText.setText(TAG);
 	}
+	
+	
+	private OnFocusChangeListener onFocusChangeListener = new OnFocusChangeListener() {
+		
+		@Override
+		public void onFocusChange(View v, boolean hasFocus) {
+			if(hasFocus) {
+				SystemUtils.showSoftInput(SharePubActivity.this, v);
+			} else {
+				SystemUtils.hideSoftInput(SharePubActivity.this, v);
+			}
+		}
+	};
 	
 	
 	/**
@@ -214,5 +230,5 @@ public class SharePubActivity extends BaseActivity implements OnClickListener{
 		
 		return list;
 	}
-	
+
 }

@@ -62,6 +62,14 @@
             android:theme="@android:style/Theme.Black.NoTitleBar"/>
         
         <activity 
+            android:name=".ui.activity.ChatDetailActivity" 
+            android:theme="@android:style/Theme.Black.NoTitleBar"/>
+        
+        <activity 
+            android:name=".ui.activity.SearchActivity" 
+            android:theme="@android:style/Theme.Black.NoTitleBar"/>
+        
+        <activity 
             android:name=".ui.activity.SettingActivity" 
             android:theme="@android:style/Theme.Black.NoTitleBar"/>
         
