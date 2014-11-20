@@ -10,11 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
-import android.widget.CheckBox;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.AdapterView;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -27,6 +24,12 @@ import com.foolish.app.utils.SystemUtils;
 import com.foolish.app.utils.ToastUtils;
 
 
+/**
+ * 发表分享界面
+ * @author AA
+ * @date 2014-11-07
+ * 
+ */
 public class SharePubActivity extends BaseActivity implements OnClickListener{
 
 	private static final String TAG = "与你分享";
@@ -36,8 +39,6 @@ public class SharePubActivity extends BaseActivity implements OnClickListener{
 	private TextView mTitleBack;
 	private TextView mTitleNext;
 	
-	private CheckBox mTitleCheckBox;
-	private EditText mTitleEdit;
 	private EditText mContentEdit;
 	private ImageButton mFaceBtn;
 	private ImageButton mPictureBtn;
@@ -50,7 +51,7 @@ public class SharePubActivity extends BaseActivity implements OnClickListener{
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState, R.layout.activity_talk_pub);
+		super.onCreate(savedInstanceState, R.layout.activity_share_pub);
 
 		initView();
 
@@ -58,10 +59,6 @@ public class SharePubActivity extends BaseActivity implements OnClickListener{
 
 	private void initView() {
 		initTitle();
-		mTitleCheckBox = (CheckBox)findViewById(R.id.share_title_checkbox);
-		mTitleCheckBox.setOnCheckedChangeListener(onCheckedChangeListener);
-		mTitleEdit = (EditText)findViewById(R.id.share_title_edit);
-		mTitleEdit.setOnFocusChangeListener(onFocusChangeListener);
 		mContentEdit = (EditText)findViewById(R.id.share_content_edit);
 		mContentEdit.setOnFocusChangeListener(onFocusChangeListener);
 		mFaceBtn = (ImageButton)findViewById(R.id.share_face_btn);
@@ -113,29 +110,6 @@ public class SharePubActivity extends BaseActivity implements OnClickListener{
 	};
 	
 	
-	/**
-	 * CheckBox监听器
-	 */
-	private OnCheckedChangeListener onCheckedChangeListener = new OnCheckedChangeListener() {
-		
-		@Override
-		public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-			if(isChecked) {
-				mTitleEdit.setEnabled(true);
-				mTitleEdit.setHint(getResources().getString(R.string.share_pub_title_unlock));
-				mTitleEdit.requestFocus();
-				mTitleEdit.setFocusableInTouchMode(true);  
-				mTitleEdit.setFocusable(true);
-			} else {
-				mTitleEdit.setEnabled(false);
-				mTitleEdit.setHint(getResources().getString(R.string.share_pub_title_lock));
-			}
-			
-			
-		}
-	};
-	
-	
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
@@ -178,13 +152,13 @@ public class SharePubActivity extends BaseActivity implements OnClickListener{
 	 */
 	private void showPopupWindow(final List<HashMap<String, String>> list, final View upwardView) {
 		LayoutInflater inflater = (LayoutInflater)this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		View layout = inflater.inflate(R.layout.pw_detail, null);
+		View layout = inflater.inflate(R.layout.pw_listview_layout, null);
 		mPopupWindowListView = (ListView)layout.findViewById(R.id.pw_detail_listview);
 		mPopupWindow = new PopupWindow(layout);
 		//加上这个PopupWindow中的ListView才可以接收点击事件
 		mPopupWindow.setFocusable(true);
 		//设置适配器
-		mPopupWindowListView.setAdapter(new SimpleAdapter(this, list, R.layout.pw_detail_item, new String[]{"key"}, new int[]{R.id.pw_detail_listview_item}));
+		mPopupWindowListView.setAdapter(new SimpleAdapter(this, list, R.layout.pw_item_share_pub, new String[]{"key"}, new int[]{R.id.pw_detail_listview_item}));
 		//设置滚动条
 		mPopupWindowListView.setDivider(getResources().getDrawable(R.drawable.pw_list_divider));
 		mPopupWindowListView.setOnItemClickListener(new OnItemClickListener() {
@@ -205,7 +179,7 @@ public class SharePubActivity extends BaseActivity implements OnClickListener{
 		mPopupWindow.setWidth(upwardView.getWidth());
 		mPopupWindow.setHeight((mPopupWindowListView.getMeasuredHeight() * 2) + 4);
 		//设置背景图片，不能再布局中设置，要通过代码来设置
-		mPopupWindow.setBackgroundDrawable(getResources().getDrawable(R.drawable.pw_detail_bg_selector));
+		mPopupWindow.setBackgroundDrawable(getResources().getDrawable(R.drawable.pw_share_pub_bg_selector));
 		//点屏幕其他地方对话框消失
 		mPopupWindow.setOutsideTouchable(true);
 		//设置对话框位置

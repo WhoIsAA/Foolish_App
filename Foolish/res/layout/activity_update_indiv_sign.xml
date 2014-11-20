@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar_activity" />
+
+    <EditText
+        android:id="@+id/id_et_update_indiv_sign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        android:layout_margin="@dimen/space_3"
+        android:background="@color/white"
+        android:gravity="start"
+        android:hint="@string/update_indiv_sign_hint"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:padding="@dimen/space_10"
+        android:textColor="@color/black"
+        android:textColorHint="#777777"
+        android:textSize="@dimen/text_size_15" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_base_bg"
+        android:gravity="end|center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_10" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update_indiv_sign_tips_first"
+            android:textColor="#666666"
+            android:textSize="@dimen/text_size_13" />
+        
+        <TextView
+            android:id="@+id/id_tv_remain_words"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="88"
+            android:paddingLeft="@dimen/space_2"
+            android:paddingRight="@dimen/space_2"
+            android:textColor="#666666"
+            android:textSize="@dimen/text_size_13" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update_indiv_sign_tips_last"
+            android:textColor="#666666"
+            android:textSize="@dimen/text_size_13" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" />
+
+</LinearLayout>

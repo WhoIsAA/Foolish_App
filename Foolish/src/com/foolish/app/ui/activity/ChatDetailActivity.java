@@ -109,11 +109,11 @@ public class ChatDetailActivity extends BaseActivity implements OnClickListener 
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.title_bar_left:
+		case R.id.title_bar_left_img:
 			finish();
 			break;
 			
-		case R.id.title_bar_right:
+		case R.id.title_bar_right_img:
 			ToastUtils.show(ChatDetailActivity.this, R.string.submit);
 			
 			break;

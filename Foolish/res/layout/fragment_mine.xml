@@ -5,188 +5,179 @@
     android:background="@color/app_base_bg"
     android:orientation="vertical" >
 
-    <include layout="@layout/main_title_bar" />
-
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/id_ll_mine_head_bg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:layout_height="wrap_content"
+        android:background="@drawable/mine_info_bg" >
 
-        <RelativeLayout
-            android:id="@+id/id_ll_mine_head_bg"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tv_mine_username"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/mine_info_bg" >
+            android:layout_above="@+id/id_line_mine_top"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/space_20"
+            android:drawableTop="@drawable/mine_head_bg"
+            android:singleLine="true"
+            android:text="123456789"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tv_mine_username"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_above="@+id/id_line_mine_top"
-                android:layout_marginBottom="@dimen/space_20"
-                android:drawableTop="@drawable/mine_head_bg"
-                android:singleLine="true"
-                android:text="123456789"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_15"
-                android:textStyle="bold" />
+        <View
+            android:id="@+id/id_line_mine_top"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_above="@+id/id_ll_mine_head_bottom"
+            android:background="@color/mine_head_line_nor" />
+
+        <LinearLayout
+            android:id="@+id/id_ll_mine_head_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mine_head_layout_height"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:baselineAligned="false"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/mine_head_layout_height"
+                android:layout_weight="1"
+                android:background="@drawable/trans_rect_bg_selector"
+                android:backgroundDimEnabled="true" >
+
+                <LinearLayout
+                    android:id="@+id/id_ll_mine_head_bottom_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_5" >
+
+                    <TextView
+                        android:id="@+id/id_tv_mine_head_bottom_one_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_13" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的分享"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_13" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/id_line_mine_head_bottom_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/mine_head_line_nor" />
+            </RelativeLayout>
 
             <View
-                android:id="@+id/id_line_mine_top"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_above="@+id/id_ll_mine_head_bottom"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
                 android:background="@color/mine_head_line_nor" />
 
-            <LinearLayout
-                android:id="@+id/id_ll_mine_head_bottom"
-                android:layout_width="match_parent"
+            <RelativeLayout
+                android:layout_width="0dp"
                 android:layout_height="@dimen/mine_head_layout_height"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:baselineAligned="false"
-                android:gravity="bottom"
-                android:orientation="horizontal" >
+                android:layout_weight="1"
+                android:background="@drawable/trans_rect_bg_selector"
+                android:backgroundDimEnabled="true" >
 
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/mine_head_layout_height"
-                    android:layout_weight="1"
-                    android:background="@drawable/trans_rect_bg_selector"
-                    android:backgroundDimEnabled="true" >
+                <LinearLayout
+                    android:id="@+id/id_ll_mine_head_bottom_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_5" >
 
-                    <LinearLayout
-                        android:id="@+id/id_ll_mine_head_bottom_one"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_centerInParent="true"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="@dimen/space_5" >
+                    <TextView
+                        android:id="@+id/id_tv_mine_head_bottom_two_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_13" />
 
-                        <TextView
-                            android:id="@+id/id_tv_mine_head_bottom_one_count"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="10"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/text_size_13" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="我的分享"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/text_size_13" />
-                    </LinearLayout>
-
-                    <View
-                        android:id="@+id/id_line_mine_head_bottom_one"
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_alignParentBottom="true"
-                        android:background="@color/mine_head_line_nor" />
-                </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的评论"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_13" />
+                </LinearLayout>
 
                 <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
+                    android:id="@+id/id_line_mine_head_bottom_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
                     android:background="@color/mine_head_line_nor" />
+            </RelativeLayout>
 
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/mine_head_layout_height"
-                    android:layout_weight="1"
-                    android:background="@drawable/trans_rect_bg_selector"
-                    android:backgroundDimEnabled="true" >
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/mine_head_line_nor" />
 
-                    <LinearLayout
-                        android:id="@+id/id_ll_mine_head_bottom_two"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_centerInParent="true"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="@dimen/space_5" >
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/mine_head_layout_height"
+                android:layout_weight="1"
+                android:background="@drawable/trans_rect_bg_selector"
+                android:backgroundDimEnabled="true" >
 
-                        <TextView
-                            android:id="@+id/id_tv_mine_head_bottom_two_count"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="10"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/text_size_13" />
+                <LinearLayout
+                    android:id="@+id/id_ll_mine_head_bottom_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_5" >
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="我的评论"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/text_size_13" />
-                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/id_tv_mine_head_bottom_three_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_13" />
 
-                    <View
-                        android:id="@+id/id_line_mine_head_bottom_two"
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_alignParentBottom="true"
-                        android:background="@color/mine_head_line_nor" />
-                </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的关注"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_13" />
+                </LinearLayout>
 
                 <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
+                    android:id="@+id/id_line_mine_head_bottom_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
                     android:background="@color/mine_head_line_nor" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
 
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/mine_head_layout_height"
-                    android:layout_weight="1"
-                    android:background="@drawable/trans_rect_bg_selector"
-                    android:backgroundDimEnabled="true" >
-
-                    <LinearLayout
-                        android:id="@+id/id_ll_mine_head_bottom_three"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_centerInParent="true"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="@dimen/space_5" >
-
-                        <TextView
-                            android:id="@+id/id_tv_mine_head_bottom_three_count"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="10"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/text_size_13" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="我的关注"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/text_size_13" />
-                    </LinearLayout>
-
-                    <View
-                        android:id="@+id/id_line_mine_head_bottom_three"
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_alignParentBottom="true"
-                        android:background="@color/mine_head_line_nor" />
-                </RelativeLayout>
-            </LinearLayout>
-        </RelativeLayout>
-        
-        <android.support.v4.view.ViewPager
-            android:id="@+id/mine_content_page"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="none" />
-        
-    </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mine_content_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" />
 
 </LinearLayout>

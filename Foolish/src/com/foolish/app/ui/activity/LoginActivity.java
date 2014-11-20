@@ -7,9 +7,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
 import com.foolish.app.R;
-import com.foolish.app.ui.AppStart;
 import com.foolish.app.ui.BaseActivity;
 
 /**

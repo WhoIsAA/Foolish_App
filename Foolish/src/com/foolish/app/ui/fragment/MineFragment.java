@@ -3,16 +3,13 @@ package com.foolish.app.ui.fragment;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 import com.foolish.app.R;
 import com.foolish.app.adapter.CommentAdapter;
 import com.foolish.app.adapter.ConcernAdapter;
 import com.foolish.app.adapter.MineShareAdapter;
-import com.foolish.app.adapter.ShareAdapter;
 import com.foolish.app.adapter.ViewPagerAdapter;
 import com.foolish.app.common.Consts;
 import com.foolish.app.ui.activity.SettingActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -24,13 +21,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 /**
  * 个人中心
@@ -40,11 +33,6 @@ import android.widget.TextView;
 public class MineFragment extends Fragment implements OnClickListener{
 
 	private static final String TAG = "个人中心";
-	private ImageButton mTitleBackImg;
-	private ImageButton mTitleNextImg;
-	private TextView mTitleText;
-	private TextView mTitleBack;
-	private TextView mTitleNext;
 	
 	private LinearLayout mShareLayout;
 	private LinearLayout mCommentLayout;
@@ -94,7 +82,6 @@ public class MineFragment extends Fragment implements OnClickListener{
 	
 	
 	private void initView() {
-		initTitle();
 		
 		DisplayMetrics dm = new DisplayMetrics();
 		getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -117,28 +104,6 @@ public class MineFragment extends Fragment implements OnClickListener{
 		initPager();
 	}
 
-	
-	/**
-	 * 初始化标题栏
-	 */
-	private void initTitle() {
-		//左边
-		mTitleBackImg = (ImageButton) mMineView.findViewById(R.id.title_bar_left_img);
-		mTitleBackImg.setVisibility(View.GONE);
-		mTitleBack = (TextView)mMineView.findViewById(R.id.title_bar_left);
-		mTitleBack.setVisibility(View.GONE);
-		//右边
-		mTitleNext = (TextView) mMineView.findViewById(R.id.title_bar_right);
-		mTitleNext.setVisibility(View.GONE);
-		mTitleNextImg = (ImageButton)mMineView.findViewById(R.id.title_bar_right_img);
-		mTitleNextImg.setVisibility(View.VISIBLE);
-		mTitleNextImg.setImageResource(R.drawable.header_setting_btn);
-		mTitleNextImg.setOnClickListener(this);
-		//中间
-		mTitleText = (TextView) mMineView.findViewById(R.id.title_bar_center);
-		mTitleText.setText(TAG);
-	}
-	
 	
 	private void initPager() {
 		mInflater = getActivity().getLayoutInflater();

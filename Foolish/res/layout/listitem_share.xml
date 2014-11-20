@@ -1,84 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="@dimen/space_10" >
-
-    <ImageView
-        android:id="@+id/talk_listitem_head"
-        style="@style/listitem_head_image"
-        android:contentDescription="@string/iv_cont_des_string" />
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/space_10"
-        android:layout_marginStart="@dimen/space_10"
+        android:background="@android:color/white"
         android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/talk_listitem_username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:includeFontPadding="false"
-            android:singleLine="true"
-            android:text="AA"
-            android:textColor="@color/listitem_blue"
-            android:textSize="@dimen/text_size_14" />
-
-        <TextView
-            android:id="@+id/talk_listitem_content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_8"
-            android:text="有人吗？有人吗？？？有人吗？有人吗？有人吗？？？有人吗？有人吗？？？有人吗？有人吗？？？"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size_15" />
-
-        <ImageView
-            android:id="@+id/talk_listitem_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_8"
-            android:contentDescription="@string/iv_cont_des_string"
-            android:background="@drawable/listitem_empty" />
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_8"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:id="@+id/talk_listitem_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="两天前"
-                android:textColor="@color/listitem_gray"
-                android:textSize="@dimen/text_size_10" />
+            android:layout_margin="@dimen/space_10" >
 
             <ImageView
-                android:id="@+id/talk_listitem_comment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/space_10"
-                android:layout_marginStart="@dimen/space_10"
-                android:layout_gravity="center_vertical"
-                android:contentDescription="@string/iv_cont_des_string"
-                android:src="@drawable/comment_count_icon" />
+                android:id="@+id/id_iv_share_head"
+                style="@style/listitem_head_image"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/iv_cont_des_string" />
 
             <TextView
-                android:id="@+id/talk_listitem_comment_count"
+                android:id="@+id/id_tv_share_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/id_iv_share_head"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginStart="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_2"
+                android:layout_toEndOf="@+id/id_iv_share_head"
+                android:layout_toRightOf="@+id/id_iv_share_head"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:text="我的昵称是用户名"
+                android:textColor="@color/listitem_blue"
+                android:textSize="@dimen/text_size_15" />
+
+            <ImageView
+                android:id="@+id/id_iv_share_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/space_3"
-                android:layout_marginStart="@dimen/space_3"
-                android:text="3"
+                android:layout_alignBottom="@+id/id_iv_share_head"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginStart="@dimen/space_10"
+                android:layout_toEndOf="@+id/id_iv_share_head"
+                android:layout_toRightOf="@+id/id_iv_share_head"
+                android:background="@drawable/icon_share_date"
+                android:contentDescription="@string/iv_cont_des_string" />
+
+            <TextView
+                android:id="@+id/id_tv_share_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/id_iv_share_head"
+                android:layout_marginBottom="@dimen/space_2"
+                android:layout_marginLeft="@dimen/space_5"
+                android:layout_marginStart="@dimen/space_5"
+                android:layout_toEndOf="@+id/id_iv_share_date"
+                android:layout_toRightOf="@+id/id_iv_share_date"
+                android:text="两分钟前"
                 android:textColor="@color/listitem_gray"
-                android:textSize="@dimen/text_size_10" />
-        </LinearLayout>
+                android:textSize="@dimen/text_size_14" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/id_tv_share_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_10"
+            android:layout_marginRight="@dimen/space_10"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.2"
+            android:text="我觉得我是全世界最聪明绝顶的人。因为有些博士其实见识没有多少长进，只是学会了怎么把一句人都听得懂的话写得鬼都看不懂。"
+            android:textColor="#666666"
+            android:textSize="@dimen/text_size_16" />
+
+        <ImageView
+            android:id="@+id/id_iv_share_content_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/space_10"
+            android:layout_marginTop="@dimen/space_10"
+            android:background="@drawable/listitem_empty"
+            android:contentDescription="@string/iv_cont_des_string" />
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fafafa"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_3" >
+
+        <TextView
+            android:id="@+id/id_tv_share_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/space_10"
+            android:layout_marginRight="@dimen/space_10"
+            android:text="0"
+            android:textColor="@color/listitem_gray"
+            android:textSize="@dimen/text_size_14" />
+
+        <ImageView
+            android:id="@+id/id_iv_share_comment"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/space_5"
+            android:layout_marginRight="@dimen/space_5"
+            android:layout_toLeftOf="@+id/id_tv_share_comment"
+            android:layout_toStartOf="@+id/id_tv_share_comment"
+            android:background="@drawable/icon_share_comment_p"
+            android:clickable="true"
+            android:contentDescription="@string/iv_cont_des_string" />
+    </RelativeLayout>
 
 </LinearLayout>

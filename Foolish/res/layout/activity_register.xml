@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/register_bg" >
 
-    <include layout="@layout/main_title_bar"/>
+    <include layout="@layout/title_bar_activity"/>
 
     <LinearLayout
         android:id="@+id/register_top"

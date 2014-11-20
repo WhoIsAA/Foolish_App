@@ -7,13 +7,13 @@
 
     <ImageView
         android:id="@+id/menu_list_item_head"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_gravity="center_vertical"
-        android:layout_marginTop="@dimen/space_5"
-        android:layout_marginBottom="@dimen/space_5"
-        android:layout_marginLeft="@dimen/space_20"
-        android:layout_marginStart="@dimen/space_20"
+        android:layout_marginTop="@dimen/space_10"
+        android:layout_marginBottom="@dimen/space_10"
+        android:layout_marginLeft="@dimen/space_30"
+        android:layout_marginStart="@dimen/space_30"
         android:layout_marginRight="@dimen/space_10"
         android:layout_marginEnd="@dimen/space_10"
         android:contentDescription="@string/iv_cont_des_string" />
@@ -24,8 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:gravity="center"
-        android:textColor="@color/white"
-        android:textSize="@dimen/text_size_15"
+        android:textColor="#2d2b2c"
+        android:textSize="@dimen/text_size_20"
         android:textStyle="bold" />
 
 </LinearLayout>

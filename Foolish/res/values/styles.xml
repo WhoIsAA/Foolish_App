@@ -72,8 +72,31 @@
         <item name="android:fadingEdge">none</item>
         <item name="android:cacheColorHint">#00000000</item>
         <item name="android:listSelector">@drawable/listview_item_bg_selector</item>
-        <item name="android:divider">#cfcfcf</item>
-        <item name="android:dividerHeight">0.5dp</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:divider">#f0f0f0</item>
+        <item name="android:dividerHeight">1.5dp</item>
+    </style>
+    
+    <!-- switch button -->
+    <style name="switch_button_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:minHeight">52dp</item>
+		<item name="android:drawablePadding">16dp</item>
+	    <item name="android:textColor">@android:color/black</item>
+    </style>
+    
+    
+    <!-- PopupWindow 显示&消失动画 -->
+    <style name="popupwindow_anim_style">
+        <!-- 指定显示动画 -->
+        <item name="android:windowEnterAnimation">@anim/pw_show_anim</item>
+        <!-- 指定消失动画 -->
+        <item name="android:windowExitAnimation">@anim/pw_hide_anim</item>
     </style>
     
 </resources>

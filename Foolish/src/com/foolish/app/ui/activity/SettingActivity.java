@@ -24,18 +24,12 @@ public class SettingActivity extends BaseActivity implements OnClickListener{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState, R.layout.activity_setting);
-		
 		initView();
-		
-		
-		
 	}
 	
 	
 	private void initView() {
 		initTitle();
-		
-		
 	}
 
 	

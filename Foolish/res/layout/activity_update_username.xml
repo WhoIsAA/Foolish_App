@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_base_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar_activity" />
+
+    <EditText
+        android:id="@+id/id_et_update_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_3"
+        android:background="@color/white"
+        android:gravity="start"
+        android:hint="@string/update_username_hint"
+        android:inputType="text"
+        android:singleLine="true"
+        android:padding="@dimen/space_10"
+        android:textColor="@color/black"
+        android:textColorHint="#777777"
+        android:textSize="@dimen/text_size_15" />
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/update_username_tips"
+        android:textColor="#666666"
+        android:textSize="@dimen/option_text_size"
+        android:padding="@dimen/space_10" />
+
+</LinearLayout>

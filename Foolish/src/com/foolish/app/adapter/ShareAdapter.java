@@ -46,22 +46,22 @@ public class ShareAdapter extends BaseAdapter {
 		if(convertView == null) {
 			convertView = mInflater.inflate(R.layout.listitem_share, null);
 			viewHolder = new ViewHolder();
-			viewHolder.headImage = (ImageView)convertView.findViewById(R.id.talk_listitem_head);
-			viewHolder.talkUsername = (TextView)convertView.findViewById(R.id.talk_listitem_username);
-			viewHolder.talkContent = (TextView)convertView.findViewById(R.id.talk_listitem_content);
-			viewHolder.talkContentImage = (ImageView)convertView.findViewById(R.id.talk_listitem_image);
-			viewHolder.talkDate = (TextView)convertView.findViewById(R.id.talk_listitem_date);
+			viewHolder.headImage = (ImageView)convertView.findViewById(R.id.id_iv_share_head);
+			viewHolder.shareUsername = (TextView)convertView.findViewById(R.id.id_tv_share_username);
+			viewHolder.shareDate = (TextView)convertView.findViewById(R.id.id_tv_share_date);
+			viewHolder.shareContent = (TextView)convertView.findViewById(R.id.id_tv_share_content);
+			viewHolder.shareContentImage = (ImageView)convertView.findViewById(R.id.id_iv_share_content_img);
 			convertView.setTag(viewHolder);
 			
 		} else {
 			viewHolder = (ViewHolder)convertView.getTag();
 		}
-		String username = mList.get(position).get(Consts.TALK_USERNAME).toString();
-		viewHolder.talkUsername.setText(StringUtils.checkNull(username));
-		String content = mList.get(position).get(Consts.TALK_CONTENT).toString();
-		viewHolder.talkContent.setText(StringUtils.checkNull(content));
-		String date = mList.get(position).get(Consts.TALK_DATE).toString();
-		viewHolder.talkDate.setText(StringUtils.checkNull(date));
+		String username = mList.get(position).get(Consts.SHARE_USERNAME).toString();
+		viewHolder.shareUsername.setText(StringUtils.checkNull(username));
+		String content = mList.get(position).get(Consts.SHARE_CONTENT).toString();
+		viewHolder.shareContent.setText(StringUtils.checkNull(content));
+		String date = mList.get(position).get(Consts.SHARE_DATE).toString();
+		viewHolder.shareDate.setText(StringUtils.checkNull(date));
 		
 		return convertView;
 	}
@@ -69,10 +69,12 @@ public class ShareAdapter extends BaseAdapter {
 	
 	private class ViewHolder {
 		ImageView headImage;
-		TextView talkUsername;
-		TextView talkContent;
-		ImageView talkContentImage;
-		TextView talkDate;
+		TextView shareUsername;
+		TextView shareDate;
+		TextView shareContent;
+		ImageView shareContentImage;
+		TextView shareZanCount;
+		TextView shareCommentCount;
 	}
 	
 }

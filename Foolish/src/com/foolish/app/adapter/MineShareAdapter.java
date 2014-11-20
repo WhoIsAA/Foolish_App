@@ -46,11 +46,11 @@ public class MineShareAdapter extends BaseAdapter {
 		if(convertView == null) {
 			convertView = mInflater.inflate(R.layout.listitem_share, null);
 			viewHolder = new ViewHolder();
-			viewHolder.head = (ImageView)convertView.findViewById(R.id.talk_listitem_head);
-			viewHolder.username = (TextView)convertView.findViewById(R.id.talk_listitem_username);
-			viewHolder.content = (TextView)convertView.findViewById(R.id.talk_listitem_content);
-			viewHolder.contentImage = (ImageView)convertView.findViewById(R.id.talk_listitem_image);
-			viewHolder.date = (TextView)convertView.findViewById(R.id.talk_listitem_date);
+			viewHolder.head = (ImageView)convertView.findViewById(R.id.id_iv_share_head);
+			viewHolder.username = (TextView)convertView.findViewById(R.id.id_tv_share_username);
+			viewHolder.content = (TextView)convertView.findViewById(R.id.id_tv_share_content);
+			viewHolder.contentImage = (ImageView)convertView.findViewById(R.id.id_iv_share_content_img);
+			viewHolder.date = (TextView)convertView.findViewById(R.id.id_tv_share_date);
 			convertView.setTag(viewHolder);
 			
 		} else {

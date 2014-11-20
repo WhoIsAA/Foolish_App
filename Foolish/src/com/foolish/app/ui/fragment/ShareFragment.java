@@ -9,10 +9,10 @@ import com.foolish.app.adapter.ShareAdapter;
 import com.foolish.app.common.Consts;
 import com.foolish.app.ui.activity.ShareDetailActivity;
 import com.foolish.app.ui.activity.SharePubActivity;
-import com.foolish.app.ui.widget.PullToRefreshListView;
-import com.foolish.app.ui.widget.PullToRefreshListView.FoolListViewListener;
-import com.foolish.app.utils.StringUtils;
+import com.foolish.app.ui.widget.XListView;
+import com.foolish.app.ui.widget.XListView.IXListViewListener;
 
+import android.R.anim;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -25,21 +25,21 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class ShareFragment extends Fragment implements OnClickListener, OnItemClickListener, FoolListViewListener{
 
-	private static final String TAG = "与你分享";
+public class ShareFragment extends Fragment implements OnClickListener, OnItemClickListener, IXListViewListener{
+
+	private static final String TAG = "首页";
 	private ImageButton mTitleBackImg;
 	private ImageButton mTitleNextImg;
 	private TextView mTitleText;
 	private TextView mTitleBack;
 	private TextView mTitleNext;
 	
-	private View mTalkView;
-	private PullToRefreshListView mTalkListView;
+	private View mShareView;
+	private XListView mShareListView;
 	private ShareAdapter mAdapter;
-	private List<HashMap<String, Object>> mTalkList;
+	private List<HashMap<String, Object>> mShareList;
 	
 	private int total = 10;
 	
@@ -59,66 +59,45 @@ public class ShareFragment extends Fragment implements OnClickListener, OnItemCl
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		if(mTalkView == null) {
-			mTalkView = inflater.inflate(R.layout.fragment_talk, container, false);
+		if(mShareView == null) {
+			mShareView = inflater.inflate(R.layout.fragment_share, container, false);
 			initView();
 		}
 		
-		ViewGroup parent = (ViewGroup)mTalkView.getParent();
+		ViewGroup parent = (ViewGroup)mShareView.getParent();
 		if(parent != null) {
-			parent.removeView(mTalkView);
+			parent.removeView(mShareView);
 		}
 		
-		return mTalkView;
+		return mShareView;
 	}
 	
 	
 	private void initView() {
-		initTitle();
 		initListView();
 		
 	}
 	
 	
 	/**
-	 * 初始化标题栏
-	 */
-	private void initTitle() {
-		//左边
-		mTitleBackImg = (ImageButton) mTalkView.findViewById(R.id.title_bar_left_img);
-		mTitleBackImg.setVisibility(View.GONE);
-		mTitleBack = (TextView)mTalkView.findViewById(R.id.title_bar_left);
-		mTitleBack.setVisibility(View.GONE);
-		//右边
-		mTitleNext = (TextView) mTalkView.findViewById(R.id.title_bar_right);
-		mTitleNext.setVisibility(View.GONE);
-		mTitleNextImg = (ImageButton)mTalkView.findViewById(R.id.title_bar_right_img);
-		mTitleNextImg.setVisibility(View.VISIBLE);
-		mTitleNextImg.setImageResource(R.drawable.header_talk_btn);
-		mTitleNextImg.setOnClickListener(this);
-		//中间
-		mTitleText = (TextView) mTalkView.findViewById(R.id.title_bar_center);
-		mTitleText.setText(TAG);
-	}
-
-	
-	/**
 	 * 初始化列表项
 	 */
 	private void initListView() {
-		mTalkListView = (PullToRefreshListView)mTalkView.findViewById(R.id.lv_talk);
-		mTalkListView.setPullLoadEnable(true);
-		mTalkListView.setPullRefreshEnable(true);
-		mTalkListView.setAutoLoadEnable(true);
-		mTalkListView.setFoolListViewListener(this);
-		mTalkListView.setRefreshTime(StringUtils.getCurTime());
+		mShareListView = (XListView)mShareView.findViewById(R.id.id_lv_share_listview);
+		mShareListView.setPullLoadEnable(true);
+		mShareListView.setPullRefreshEnable(true);
+		mShareListView.setXListViewListener(this,1);
+		mShareListView.setAdapter(mAdapter);
+		mShareListView.setRefreshTime();
 		
-		TextView emptyTextView = (TextView)mTalkView.findViewById(R.id.tv_talk_listview_empty);
-		mTalkList = getData();
-		mAdapter = new ShareAdapter(getActivity(), mTalkList);
-		mTalkListView.setAdapter(mAdapter);
-		mTalkListView.setEmptyView(emptyTextView);
-		mTalkListView.setOnItemClickListener(this);
+		TextView emptyTextView = (TextView)mShareView.findViewById(R.id.id_tv_share_listview_empty);
+		mShareList = getData();
+		mAdapter = new ShareAdapter(getActivity(), mShareList);
+		mShareListView.setAdapter(mAdapter);
+		mShareListView.setEmptyView(emptyTextView);
+		mShareListView.setOnItemClickListener(this);
+		//去除行与行之间的黑线
+//		mShareListView.setDivider(null);
 		
 		
 	}
@@ -128,9 +107,9 @@ public class ShareFragment extends Fragment implements OnClickListener, OnItemCl
 		List<HashMap<String, Object>> list = new ArrayList<HashMap<String,Object>>();
 		for(int i=0; i<total; i++) {
 			HashMap<String, Object> map = new HashMap<String, Object>();
-			map.put(Consts.TALK_USERNAME, "用户" + i);
-			map.put(Consts.TALK_CONTENT, contents[i%contents.length]);
-			map.put(Consts.TALK_DATE, (i+1)*2 + "小时前");
+			map.put(Consts.SHARE_USERNAME, "用户" + i);
+			map.put(Consts.SHARE_CONTENT, contents[i%contents.length]);
+			map.put(Consts.SHARE_DATE, (i+1)*2 + "小时前");
 			list.add(map);
 		}
 		return list;
@@ -138,9 +117,9 @@ public class ShareFragment extends Fragment implements OnClickListener, OnItemCl
 	
 	
 	private void onLoad() {
-		mTalkListView.stopRefresh();
-		mTalkListView.stopLoadMore();
-		mTalkListView.setRefreshTime(StringUtils.getCurTime());
+		mShareListView.stopRefresh();
+		mShareListView.stopLoadMore();
+		mShareListView.setRefreshTime();
 	}
 	
 
@@ -186,8 +165,8 @@ public class ShareFragment extends Fragment implements OnClickListener, OnItemCl
 		
 		@Override
 		protected void onPostExecute(Integer result) {
-			mTalkList.clear();
-			mTalkList.addAll(getData());
+			mShareList.clear();
+			mShareList.addAll(getData());
 			mAdapter.notifyDataSetChanged();
 			onLoad();
 		}
@@ -211,22 +190,22 @@ public class ShareFragment extends Fragment implements OnClickListener, OnItemCl
 		
 		@Override
 		protected void onPostExecute(Integer result) {
-			mTalkList.clear();
-			mTalkList.addAll(getData());
+			mShareList.clear();
+			mShareList.addAll(getData());
 			mAdapter.notifyDataSetChanged();
 			onLoad();
 		}
 	}
 	
-	
+
 	@Override
-	public void onRefresh() {
+	public void onRefresh(int id) {
 		new RefreshTask().execute(0);
 	}
 
-	@Override
-	public void onLoadMore() {
-		new LoadTask().execute(0);
 
+	@Override
+	public void onLoadMore(int id) {
+		new LoadTask().execute(0);
 	}
 }

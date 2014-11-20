@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import com.foolish.app.R;
+import com.foolish.app.common.Consts;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -54,8 +55,8 @@ public class MenuAdapter extends BaseAdapter {
 		} else {
 			viewHolder = (ViewHolder)convertView.getTag();
 		}
-		viewHolder.textView.setText(mList.get(position).get("menu_friends_name").toString());
-		Drawable drawable = mContext.getResources().getDrawable((Integer)mList.get(position).get("menu_friends_head"));
+		viewHolder.textView.setText(mList.get(position).get(Consts.MENU_TEXT).toString());
+		Drawable drawable = mContext.getResources().getDrawable((Integer)mList.get(position).get(Consts.MENU_ICON));
 		viewHolder.imageView.setBackgroundDrawable(drawable);
 		
 		return convertView;

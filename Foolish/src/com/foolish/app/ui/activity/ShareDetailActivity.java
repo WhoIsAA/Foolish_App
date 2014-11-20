@@ -78,6 +78,7 @@ public class ShareDetailActivity extends BaseActivity implements OnClickListener
 		mTitleNextImg = (ImageButton) findViewById(R.id.title_bar_right_img);
 		mTitleNextImg.setVisibility(View.VISIBLE);
 		mTitleNextImg.setImageResource(R.drawable.share_detail_refresh);
+		mTitleNextImg.setBackgroundColor(getResources().getColor(android.R.color.transparent));
 		mTitleNextImg.setOnClickListener(this);
 		// 中间
 		mTitleText = (TextView) findViewById(R.id.title_bar_center);

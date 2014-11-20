@@ -18,7 +18,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/space_30"
         android:layout_marginStart="@dimen/space_30" >
 
@@ -28,15 +28,12 @@
             android:layout_height="wrap_content"
             android:layout_toLeftOf="@+id/id_ib_chat_detail_to_head"
             android:layout_toStartOf="@+id/id_ib_chat_detail_to_head"
-            android:background="@drawable/chat_detail_to_bg"
+            android:background="@drawable/chat_detail_to_bg_selector"
+            android:clickable="true"
             android:gravity="center_vertical"
-            android:paddingBottom="@dimen/space_10"
-            android:paddingLeft="@dimen/space_10"
-            android:paddingRight="@dimen/space_20"
-            android:paddingTop="@dimen/space_10"
             android:text="我看看，一会再和你详细说我看看，一会再和你详细说"
             android:textColor="@color/black"
-            android:textSize="@dimen/text_size_14" />
+            android:textSize="@dimen/text_size_16" />
 
         <ImageButton
             android:id="@+id/id_ib_chat_detail_to_head"

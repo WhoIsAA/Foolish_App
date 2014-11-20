@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_base_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_bar_activity" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <EditText
+            android:id="@+id/share_content_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/space_3"
+            android:background="@null"
+            android:gravity="start"
+            android:hint="@string/share_pub_content_hint"
+            android:inputType="text"
+            android:padding="3dp"
+            android:textColor="#666666"
+            android:textColorHint="#777777"
+            android:textSize="@dimen/text_size_15" />
+
+        <LinearLayout
+            android:id="@+id/share_pub_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="#336666"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/share_face_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginStart="@dimen/space_10"
+                android:layout_weight="2"
+                android:background="@null"
+                android:contentDescription="@string/iv_cont_des_string"
+                android:src="@drawable/pub_face_selector" />
+
+            <ImageButton
+                android:id="@+id/share_picture_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginStart="@dimen/space_10"
+                android:layout_weight="2"
+                android:background="@null"
+                android:contentDescription="@string/iv_cont_des_string"
+                android:src="@drawable/pub_picture_selector" />
+
+            <ImageButton
+                android:id="@+id/share_camera_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginStart="@dimen/space_10"
+                android:layout_weight="2"
+                android:background="@null"
+                android:contentDescription="@string/iv_cont_des_string"
+                android:src="@drawable/pub_camera_selector" />
+
+            <TextView
+                android:id="@+id/share_public_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/space_3"
+                android:layout_weight="2"
+                android:background="@drawable/trans_round_border_btn_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="公开"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12" />
+
+            <TextView
+                android:id="@+id/share_comment_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/space_5"
+                android:layout_marginLeft="@dimen/space_3"
+                android:layout_marginRight="@dimen/space_5"
+                android:layout_marginStart="@dimen/space_3"
+                android:layout_weight="3"
+                android:background="@drawable/trans_round_border_btn_selector"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="允许评论"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

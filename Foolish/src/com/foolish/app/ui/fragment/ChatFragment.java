@@ -60,31 +60,9 @@ public class ChatFragment extends Fragment implements OnClickListener, OnItemCli
 
 	
 	private void initView() {
-		initTitle();
 		initListView();
 	}
 
-	
-	/**
-	 * 初始化标题栏
-	 */
-	private void initTitle() {
-		// 左边
-		mTitleBackImg = (ImageButton) mChatView.findViewById(R.id.title_bar_left_img);
-		mTitleBackImg.setVisibility(View.GONE);
-		mTitleBack = (TextView) mChatView.findViewById(R.id.title_bar_left);
-		mTitleBack.setVisibility(View.GONE);
-		// 右边
-		mTitleNext = (TextView) mChatView.findViewById(R.id.title_bar_right);
-		mTitleNext.setVisibility(View.GONE);
-		mTitleNextImg = (ImageButton) mChatView.findViewById(R.id.title_bar_right_img);
-		mTitleNextImg.setVisibility(View.VISIBLE);
-		mTitleNextImg.setImageResource(R.drawable.header_search_btn);
-		mTitleNextImg.setOnClickListener(this);
-		// 中间
-		mTitleText = (TextView) mChatView.findViewById(R.id.title_bar_center);
-		mTitleText.setText(TAG);
-	}
 
 	/**
 	 * 初始化列表

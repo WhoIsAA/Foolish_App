@@ -6,7 +6,7 @@
 
     <include
         android:id="@+id/share_detail_title"
-        layout="@layout/main_title_bar" />
+        layout="@layout/title_bar_activity" />
 
     <ScrollView
         android:id="@+id/share_detail_scrollview"
@@ -28,7 +28,7 @@
                 android:layout_height="2dp"
                 android:background="#08899c" />
 
-            <com.foolish.app.ui.widget.ListViewForScrollView
+            <com.foolish.app.nouse.ListViewForScrollView
                 android:id="@+id/lv_share_detail_comments"
                 style="@style/listitem_style" />
         </LinearLayout>

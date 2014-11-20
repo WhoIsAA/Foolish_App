@@ -47,7 +47,7 @@ public class AppStart extends BaseActivity implements OnClickListener{
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState, R.layout.activity_start_new);
+		super.onCreate(savedInstanceState, R.layout.activity_start);
 		
 		initView();
 		

@@ -15,10 +15,9 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@android:style/Theme.Black.NoTitleBar" >
         <activity
-            android:name="com.foolish.app.ui.AppStart"
-            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:name=".ui.AppStart"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,51 +26,29 @@
             </intent-filter>
         </activity>
         
-        <activity 
-            android:name=".ui.activity.Start" 
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
-        
-        <activity 
-            android:name=".ui.activity.LoginActivity" 
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
-        
-        <activity 
-            android:name=".ui.activity.RegisterActivity" 
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
-        
-        <activity 
-            android:name=".ui.activity.GesturePwdActivity" 
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
+        <activity android:name=".ui.activity.Start" />
+        <activity android:name=".ui.activity.LoginActivity" />
+        <activity android:name=".ui.activity.RegisterActivity" />
+        <activity android:name=".ui.activity.GesturePwdActivity" />
+        <activity android:name=".ui.activity.MainActivity" />
+        <activity android:name=".ui.activity.ShareDetailActivity" />
+        <activity android:name=".ui.activity.ChatDetailActivity" />
+        <activity android:name=".ui.activity.SearchActivity" />
+        <activity android:name=".ui.activity.SettingActivity" />
+        <activity android:name=".ui.activity.BasicInfoActivity" />
+        <activity android:name=".ui.activity.UpdateUserNameActivity" />
                 
         <activity 
-            android:name=".ui.activity.MainActivity" 
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
-        
-        <activity 
-            android:name=".ui.activity.QuestionPubActivity" 
-            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:name="com.foolish.app.nouse.QuestionPubActivity" 
             android:windowSoftInputMode="stateVisible|adjustResize"/>
         
         <activity 
             android:name=".ui.activity.SharePubActivity" 
-            android:theme="@android:style/Theme.Black.NoTitleBar"
             android:windowSoftInputMode="stateVisible|adjustResize"/>
         
         <activity 
-            android:name=".ui.activity.ShareDetailActivity" 
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
-        
-        <activity 
-            android:name=".ui.activity.ChatDetailActivity" 
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
-        
-        <activity 
-            android:name=".ui.activity.SearchActivity" 
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
-        
-        <activity 
-            android:name=".ui.activity.SettingActivity" 
-            android:theme="@android:style/Theme.Black.NoTitleBar"/>
+            android:name=".ui.activity.UpdateIndivSignActivity" 
+            android:windowSoftInputMode="stateVisible|adjustResize" />
         
     </application>
 
